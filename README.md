@@ -17,11 +17,27 @@ Built by:
 - Nathan Blaga [GitHub](https://github.com/NJBLAGA)
 - Raymond Doan [GitHub](https://github.com/raymonddoan)
 
-## **Front-End**
+## **Front-End Instructions to Install and Run**
 
-## **Back-End**
+Follow the below steps to successfully install and run the front-end application of Untitled Suite.
 
-## **Instructions**
+1. Head over to the project's front-end GitHub page at `ttps://github.com/TheSchwiftyCommittee/untitled-suite-react-app`
+1. Click on the green button labelled `code`
+1. Copy either the `HTTPS` or `SSH link`.
+1. In your terminal, head to the directory/folder of your choice (where you want to store the front-end application)
+1. Type the following command `git clone xxxxxxxxxxxxx` (xxxx denoting the copied link from step 3)
+1. This command will then proceed to clone the front-end repo to your local machine
+1. Navigate to your local cloned copy by using `cd untitled-suite-react-app` in your terminal
+1. Using `yarn install --check-files`, install the projects required dependencies.
+1. Once the above command has finished, open the project using the command `code.` (if using `VS Code`) or the text editor of your choice.
+1. Make sure the back-end API and server are running (following the instructions outlined in the  back-end GitHub Repo [here](https://github.com/TheSchwiftyCommittee/untitled-suite-api-db) ).
+1. Once completed, run the following command: `yarn start`.
+
+The `React Front-End` should now be running on `localhost:3000`.
+
+Enjoy!
+
+## **Back-End Instructions to Install and Run**
 
 Follow the below steps to successfully install and run Prince Theatre.
 
@@ -84,7 +100,7 @@ cloudinary:
 
 **_NOTE:_** You can find your `cloud_name`, `api_key` and `api_secret` on your cloudinary dashboard. If you do not have an account, create one here:
 
-**http://www.cloudinary.com**
+[http://www.cloudinary.com](http://www.cloudinary.com)
 
 Once you have signed up (it is for free), you will be directed to your `dashboard`.
 
@@ -114,7 +130,7 @@ In your terminal, type the following command:
 
 ```r
 #Runs rails server on port 4000(default)
-rails s - 4000
+rails s -p 4000
 ```
 
 The `API back-end` should now be running on `localhost:4000`.
@@ -122,6 +138,8 @@ The `API back-end` should now be running on `localhost:4000`.
 Enjoy!
 
 ## **How to Run tests**
+
+### **Back-end Unit Testing - Rspec**
 
 1. All `Untitled-Suite` testing files are located withing the `/spec/model` folders as shown below:
 
@@ -133,25 +151,64 @@ Enjoy!
 
 ![Untitled-Suite's Rspec Results](./docs/images/Rspec_testing.png)
 
+### **Front-End Unit Testing - JEST and React-Testing-Library**
+
+1. Unit testing files are located within the same folders as the files they are testing (ie. `App.test.js` is located in the same folder as `App.js`).
+1. Using `yarn install --check-files` as instructed above, all packages required for the application listed in the `package.json` file will be installed.
+1. Within the same terminal, run the following command `yarn test` from the root directory of your cloned project. Note: `yarn test:coverage` can also be run to retrieve the test coverage results.
+1. The terminal will then display the following in your terminal:
+
+![Untitled-Suite's Unit Testing Results](./docs/images/jest-testing.png)
+
+### **Integration/E2E Testing - Cypress**
+
+1. For Integration/E2E Testing files, these files are located within the `/cypress` folder as show below:
+
+![Untitled-Suite's Integration Testing Location](./docs/images/cypress.png)
+
+1. Similar to the unit tests, once all the packages are installed using `yarn install --check-files`, run the client using `yarn start`.
+1. In a different terminal, run the following command `yarn cypress:open` from the root directory of your cloned project to run cypress. The following menu will pop up:
+
+![Untitled-Suite's Integration Testing Menu](./docs/images/cypress_menu.png)
+
+1. Once completed, click on the button `Run integration specs` on the top right of the pop up.
+1. You will be taken to a virtual Chrome browser and show the following results:
+
+![Untitled-Suite's Integration Testing Results](./docs/images/cypress_tests_results.png)
+
 ## **ERD**
 
 Throughout `Untitled-Suite's` API development, several key aspects were altered and changed based on the changing state of the application's `MVP`. The `ERD` of `Untitled-Suite` will continue to change and alter as new features are development and implemented.
 
-## **Version 1:**
+### **Version 1:**
 
 ![ERD Version 1](./docs/images/ERD_version1.png)
 
-## **Version 2:**
+### **Version 2:**
 
 ![ERD Version 1](./docs/images/ERD_version2.png)
 
-## **Version 3:**
+### **Version 3:**
 
 ![ERD Version 1](./docs/images/ERD_version3.png)
 
-## **Version 4:**
+### **Version 4:**
 
 ![ERD Version 1](./docs/images/ERD_version4.png)
+
+## **Live Visuals of Untitled Suite**
+
+### **Create Profile Page:**
+
+![Untitled-Suite's Create Profile Page](./docs/images/Selection_236.png)
+
+### **Update Task Page:**
+
+![Untitled-Suite's Update Task Page](./docs/images/Selection_244.png)
+
+### **Users Page: (Admin Dashboard)**
+
+![Untitled-Suite's Admin Dashboard Page](./docs/images/Selection_260.png)
 
 ## Background/Problem
 
@@ -281,19 +338,16 @@ The Australian public during the COVID-19 pandemic were asked to work, school an
 
 ### Gems
 
-- `Devise` used for adding authentication
+- `JWT` used for adding authentication
 - `Bcrypt` used to create password digests and authentication logic
 - `Puma` used as local testing server
 - `RSPEC-Rails` used for behavior-driven development of the back-end
 
 ### Libraries/3rd Party API
 
-- `Google Calendar API` for calendar feature
 - `Material-UI` for CSS framework
 - `Axios` used for fetching data from the back-end
 - `React-router-dom` used to create a multi-page application
-- `AWS` used as the cloud web hosting solution for project
-- `PayPal Developer` used to integrate PayPal into the platform
 
 ### Deployment
 
@@ -517,7 +571,29 @@ The above points are only some of the benefits a project such as `Untitled-Suite
 
 #### **Jest:**
 
+`jest` is the default testing library for React Applications and is perfect for Unit Testing because of the following reasons:
+
+- offers a CLI tool to control your tests easily
+- comes with an interactive mode that automatically runs all affected tests since change
+- provides excellent documentation with plenty of examples and a supportive community.
+
+The default methods and helpers available from Jest is great for `Untitled-Suite`. The lightweight library and user-friendly experience was perfect to testing the front-end and the terminology is extremely easy to understand.
+
+#### **React Testing Library:**
+
+`@testing-library/react` is a great package with similar syntax to `jest` and makes it an amazing library to fill in the gaps of `jest`. This package was mainly utilised to trigger events (ie. onClick and onChange handlers) with the `fireEvent` method and rendering components with the `render` method. Other benefits of the library include:
+
+- Enabling quality tests to be written to ensure complete accuracy.
+- Offers a way to find elements by a data-testid for elements
+- Avoids testing the internal component state.
+
 #### **Cypress:**
+
+Cypress is supported across multiple platforms (ie. Chrome, Firefox and Edge browsers). Cypress executes them in real-time as developers write code, which makes it easily accessible and responsive to use.
+
+- Cypress framework captures snapshots at the time of test execution.
+- Cypress waits automatically for commands and assertions, compared to other integration testing frameworks.
+- The automatic scrolling operation ensures that an element is in view before performing any action (ie. Clicking on a button).
 
 ## Wireframes
 
@@ -598,6 +674,8 @@ In mobile view, the users will be able to scroll left to right to view the Premi
 ## Trello Board
 
 For snapshots of the progress of our Trello board, check out the `docs/trello-board` folder. For access to the Trello board, here is the [Link to the Trello Board](https://trello.com/b/Bj5asYWU/untitled-suite) (shoot a message to Nathan or Ray for managing access).
+
+### **Part A - Trello Board Screenshots**
 
 ### Day 1 - Kickoff Meeting
 
@@ -682,9 +760,36 @@ For snapshots of the progress of our Trello board, check out the `docs/trello-bo
 
 ![trello-09](./docs/trello-board/trello-09.png)
 
-### Day 10
+### **Part B - Trello Board Screenshots**
 
-[trello-10](https://trello.com/b/Bj5asYWU/untitled-suite)
+Below are screenshots of various stages of Part B of the project. This time period consists of the following processes:
+
+- The creation of the Front-end Repo on GitHub
+- The creation of the Back-end Repo on GitHub
+- The creation of the Part-B Repo on GitHub
+- On-going Research into the different Technologies and Libraries utilised throughout Untitled-Suite's development and production
+- Resolving bugs, issues and failures between the front-end and back-end
+- Allocation of Part B tasks
+- Scheduled meeting every Monday between both parties
+- Uniting Testing for Front and Back end (Jest, React Testing Library, Rspec)
+- End 2 End testing of Cypress
+- Deployment of both ends (Heroku and Netlify)
+
+![trello-10](./docs/trello-board/partb/untitled-suite-trello-partb-01.png)
+![trello-10](./docs/trello-board/partb/untitled-suite-trello-partb-02.png)
+![trello-10](./docs/trello-board/partb/untitled-suite-trello-partb-03.png)
+![trello-10](./docs/trello-board/partb/untitled-suite-trello-partb-04.png)
+![trello-10](./docs/trello-board/partb/untitled-suite-trello-partb-06.png)
+![trello-10](./docs/trello-board/partb/untitled-suite-trello-partb-08.png)
+![trello-10](./docs/trello-board/partb/untitled-suite-trello-partb-09.png)
+![trello-10](./docs/trello-board/partb/untitled-suite-trello-partb-10.png)
+![trello-10](./docs/trello-board/partb/untitled-suite-trello-partb-11.png)
+![trello-10](./docs/trello-board/partb/untitled-suite-trello-partb-12.png)
+![trello-10](./docs/trello-board/partb/untitled-suite-trello-partb-13.png)
+![trello-10](./docs/trello-board/partb/untitled-suite-trello-partb-14.png)
+![trello-10](./docs/trello-board/partb/untitled-suite-trello-partb-15.png)
+![trello-10](./docs/trello-board/partb/untitled-suite-trello-partb-16.png)
+![trello-10](./docs/trello-board/partb/untitled-suite-trello-partb-17.png)
 
 ### Production - Testing
 
@@ -713,7 +818,8 @@ Below is `Untitled-Suite's` Production testing from a new `User` experience and 
 ![User 1 Experience](./docs/production-testing/Selection_235.png)
 
 - Image is successfully uploaded and displayed back to the User.
-  ![User 1 Experience](./docs/production-testing/Selection_236.png)
+
+![User 1 Experience](./docs/production-testing/Selection_236.png)
 
 - The User decides to head over and check the pricing page.
 
@@ -785,7 +891,8 @@ Below is `Untitled-Suite's` Production testing from a new `User` experience and 
 ![User 1 Experience](./docs/production-testing/Selection_254.png)
 
 - The user then decides to end the testing session by Signing out of their Account.
-  ![User 1 Experience](./docs/production-testing/Selection_255.png)
+
+![User 1 Experience](./docs/production-testing/Selection_255.png)
 
 The User provided feedback to their experience and the Application's functionality and overall deign.
 
@@ -825,7 +932,8 @@ Below is `Untitled-Suite's` Production testing of an `Admin` User.
 ![User 2 Experience](./docs/production-testing/Selection_262.png)
 
 - The `Admin` uses the `Search Function` to find the `deleted User`, no results were found. The `deletion` was successfully.
-  ![User 2 Experience](./docs/production-testing/Selection_263.png)
+
+![User 2 Experience](./docs/production-testing/Selection_263.png)
 
 The `Admin` provided feedback to their experience and the Application's functionality and overall deign for `admins`.
 
@@ -833,7 +941,31 @@ The `Admin` provided feedback to their experience and the Application's function
 - No errors or bug were encountered during the `Admins` testing.
 - Some form of `messaging system` between `Admins` and `Users` would benefit the application.
 
-## Additional Features for Roadmap - Whats next?
+### MVP - Whats changed?
+
+Untitled-Suite's initial conception to its current MVP state has seen several major and minor changes to it structure and functionality. The MVP will allow for the following:
+
+- Users can create a Untitled-Suite account
+- Users can create a profile attached to their account
+- Users can update their profile details at any time (First Name, Last Name, Avatar Image)
+- Users can create unlimited lists within tasker
+- Users can create unlimited tasks within their lists
+- Users can not access other user's accounts, profiles, lists or tasks
+- Admins have the same access as Users (profiles, lists and tasks)
+- Admins can access the Admin Dashboard -- allows them to view all current users and delete them if any User has breached the code of conduct
+- Admin Director can access the application in the same manner as Users and Admins
+- Admin Director can access the Admin Dashboard -- allows them to view all Users and Admins, delete Users, delete Admins, assign Users to admin status or unassign them.
+
+#### Whats Next?
+
+In regards to the Road map section above, the following features and functionality of Untitled-Suite have been postponed for the MVP and been moved to future updates:
+
+- Calendar Feature
+- Events
+- Pricing(AUD $5 per month for unlimited tasks)
+- Deeper Profile customisation
+
+## Additional Features for Roadmap
 
 Looking beyond Untitled Suite's initial release, the number one priority will be to enhance the user's experience by empowering their workspace alongside improving the overall functionality and security of the application.
 
@@ -867,11 +999,42 @@ Users can take friends from their friends list and create teams. Teams will be a
 
 Untitled Suite will add a new addition to its suite of tools in the form of a fully functional `Notepad`. This will allow users to create, edit and delete documentation on the fly. Additionally, users can utilise a copy and paste functionality between `Tasker` and the `Notepad` for easier and more productive sessions. The notepad will also be linked to the `Calendar` allowing users to save and attach meeting minutes and ideas from the notepad with any given `Event`.
 
-### Self-Reflection
+## **Self-Reflection**
 
-#### **Nathan:**
+### **Nathan:**
 
-#### **Raymond:**
+- The Project allowed me to express myself in a very creative and logical manner.
+- The creation and implementation of an API allowed me to further develop my Rails and back-end skills an knowledge.
+- Although I did not undertake a Test Driven Development Approach towards this project, it did allow me to achieve a better understanding on unit testing practices through the Rspec.
+- In turn it has driven me to not only focus on improving my knowledge base and understanding on unit testing, but inspired me to undergo further development into Test Driven Development.
+- I believe further progression down this path will result in a more efficient and effective code-base/solution.
+- I believe my strengths lay within documentation and Rails.
+- Utilising these strengths allowed myself and Raymond to take advantage and build the application with little downtime.
+- Working with Raymond was a joy and very rewarding.
+- He is a hard-working developer, whose knowledge of the front-end resulted in a stunning and smooth user experience.
+- Raymond was always at the fore-front of solving any issues.
+- Great communication between us two on a daily basis meant there was no lack of information between the front and back ends.
+- Raymond was also very easy to discuss blockers with and always aided in helping me with any of my issues.
+- It was great to not only work within a team on a major project for the above reasons, moreover the ability to pass knowledge between each other was a great bonus.
+- Adding to the above point, learning was such a critical component to this experience and project. Both of us learnt so much as a team and on a personal level.
+
+### **Raymond:**
+
+- Benefits
+
+This project was great in learning how to build a Full Stack application and integrating between applications built on different languages. During the front-end development, learning new technologies, such as Cypress and React Testing Library, are great in getting me prepared for the real-world technologies.
+
+- Learnings
+
+Using agile project management tools such as Kanban boards on Trello is a great way to keep track of tasks needed to be done. Also, the persistence and perseverance to try and solve a problem is the key to learning and increasing my knowledge. However, being aware and knowing when to reach out are also key points I have taken from this project.
+
+- Strengths
+
+Front-end development is definitely my passion and strength to the coding community. Designing visually appealling applications and designing the app's functionality (connecting to REST APIs, search and filtering data, constructing tables will unique functions) are my key takeaways of the application.
+
+- Teamwork
+
+It is really understated how important teamwork really is when designing the application, especially on this scale. Nathan was an amazing teammate to work with and extremely assisting when I had issues calling to the back end. Quick reactions and consistent meetings between us helped develop the application in a timely fashion.
 
 ## References
 
