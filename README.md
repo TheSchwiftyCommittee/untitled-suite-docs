@@ -791,6 +791,156 @@ Below are screenshots of various stages of Part B of the project. This time peri
 ![trello-10](./docs/trello-board/partb/untitled-suite-trello-partb-16.png)
 ![trello-10](./docs/trello-board/partb/untitled-suite-trello-partb-17.png)
 
+### Production - Testing
+
+#### User 1 - New User Experience
+
+Below is `Untitled-Suite's` Production testing from a new `User` experience and POV. The New User was instructed to head over to the applications url: `https://untitled-suite-react-app.netlify.app/#/`. Once the home page was loaded, the New User was asked to explore the application. The following images were taken throughout the User's experience.
+
+- User arrived on the home page successfully.
+
+![User 1 Experience](./docs/production-testing/Selection_230.png)
+
+- User created a new account
+  ![User 1 Experience](./docs/production-testing/Selection_231.png)
+  ![User 1 Experience](./docs/production-testing/Selection_232.png)
+
+- User successfully created their new account and was redirected to the profile creation page.
+
+![User 1 Experience](./docs/production-testing/Selection_233.png)
+
+- The User successfully creates their profile and is redirected to the Tasker page.
+
+![User 1 Experience](./docs/production-testing/Selection_234.png)
+
+- The User heads back to their Profile page and decided to update their Avatar image.
+
+![User 1 Experience](./docs/production-testing/Selection_235.png)
+
+- Image is successfully uploaded and displayed back to the User.
+
+![User 1 Experience](./docs/production-testing/Selection_236.png)
+
+- The User decides to head over and check the pricing page.
+
+![User 1 Experience](./docs/production-testing/Selection_237.png)
+
+- The User heads over to the Tasker Page, and creates a new List.
+
+![User 1 Experience](./docs/production-testing/Selection_238.png)
+
+- The User successfully creates the List `Fred's List`.
+
+![User 1 Experience](./docs/production-testing/Selection_239.png)
+
+- Within the List, the User creates a new Task.
+
+![User 1 Experience](./docs/production-testing/Selection_240.png)
+
+- The Task is successfully created.
+
+![User 1 Experience](./docs/production-testing/Selection_241.png)
+
+- The user than creates a new Task and it to is successfully created.
+
+![User 1 Experience](./docs/production-testing/Selection_242.png)
+
+- The User decides to Updates Task 2.
+
+![User 1 Experience](./docs/production-testing/Selection_243.png)
+
+- The User is prompted with a Update Screen and makes changes.
+
+![User 1 Experience](./docs/production-testing/Selection_244.png)
+![User 1 Experience](./docs/production-testing/Selection_245.png)
+
+- Due to the Task being completed, Tasker shows that Task as a different colour indicating to the User, the Task has been completed.
+
+![User 1 Experience](./docs/production-testing/Selection_246.png)
+
+- The user then decides to delete Task 2.
+
+![User 1 Experience](./docs/production-testing/Selection_247.png)
+
+- The action is successfully completed and Task 2 was deleted.
+
+![User 1 Experience](./docs/production-testing/Selection_248.png)
+
+- The User then wishes to update the List name and begins to do so.
+
+![User 1 Experience](./docs/production-testing/Selection_249.png)
+
+- The User is prompted with a Update Screen for the List, and begins to change the List Name.
+
+![User 1 Experience](./docs/production-testing/Selection_250.png)
+
+- The action was successfully completed and the List has a new Name.
+
+![User 1 Experience](./docs/production-testing/Selection_251.png)
+
+- The User then decides to create 2 new Lists.
+
+![User 1 Experience](./docs/production-testing/Selection_252.png)
+
+- The actions is sucessfully and Tasker displays the new Lists to the User.
+
+![User 1 Experience](./docs/production-testing/Selection_253.png)
+
+- The User then uses the Search function to look up all Lists that start with `b`. The Search function returns 2 results.
+
+![User 1 Experience](./docs/production-testing/Selection_254.png)
+
+- The user then decides to end the testing session by Signing out of their Account.
+
+![User 1 Experience](./docs/production-testing/Selection_255.png)
+
+The User provided feedback to their experience and the Application's functionality and overall deign.
+
+- Very User-friendly
+- No errors or bug were encountered
+- Smooth Design
+- They had wishes that the Profile customisation feature was out.
+- Overall very effective at creating lists and tasks.
+
+#### User 2 - Admin Experience
+
+Below is `Untitled-Suite's` Production testing of an `Admin` User.
+
+- User Sign-in and accessed the `Admin Dashboard` Page.
+
+![User 2 Experience](./docs/production-testing/Selection_256.png)
+
+- The Admin expanded their search for all `Users` on the application.
+
+![User 2 Experience](./docs/production-testing/Selection_257.png)
+![User 2 Experience](./docs/production-testing/Selection_258.png)
+
+- The `Admin` used the `Search Function` to find the `User` of choice.
+
+![User 2 Experience](./docs/production-testing/Selection_259.png)
+
+- The `Admin` `Assigns` the `User` to `Admin` status.
+
+![User 2 Experience](./docs/production-testing/Selection_260.png)
+
+- The `Admin` `Un-assigns` the `User` to `User` status.
+
+![User 2 Experience](./docs/production-testing/Selection_261.png)
+
+- The `Admin` `Deletes` th `User` from the application database.
+
+![User 2 Experience](./docs/production-testing/Selection_262.png)
+
+- The `Admin` uses the `Search Function` to find the `deleted User`, no results were found. The `deletion` was successfully.
+
+![User 2 Experience](./docs/production-testing/Selection_263.png)
+
+The `Admin` provided feedback to their experience and the Application's functionality and overall deign for `admins`.
+
+- Easy for `Admins` to perform their daily tasks and functions.
+- No errors or bug were encountered during the `Admins` testing.
+- Some form of `messaging system` between `Admins` and `Users` would benefit the application.
+
 ## Additional Features for Roadmap - Whats next?
 
 Looking beyond Untitled Suite's initial release, the number one priority will be to enhance the user's experience by empowering their workspace alongside improving the overall functionality and security of the application.
