@@ -941,7 +941,31 @@ The `Admin` provided feedback to their experience and the Application's function
 - No errors or bug were encountered during the `Admins` testing.
 - Some form of `messaging system` between `Admins` and `Users` would benefit the application.
 
-## Additional Features for Roadmap - Whats next?
+### MVP - Whats changed?
+
+Untitled-Suite's initial conception to its current MVP state has seen several major and minor changes to it structure and functionality. The MVP will allow for the following:
+
+- Users can create a Untitled-Suite account
+- Users can create a profile attached to their account
+- Users can update their profile details at any time (First Name, Last Name, Avatar Image)
+- Users can create unlimited lists within tasker
+- Users can create unlimited tasks within their lists
+- Users can not access other user's accounts, profiles, lists or tasks
+- Admins have the same access as Users (profiles, lists and tasks)
+- Admins can access the Admin Dashboard -- allows them to view all current users and delete them if any User has breached the code of conduct
+- Admin Director can access the application in the same manner as Users and Admins
+- Admin Director can access the Admin Dashboard -- allows them to view all Users and Admins, delete Users, delete Admins, assign Users to admin status or unassign them.
+
+#### Whats Next?
+
+In regards to the Road map section above, the following features and functionality of Untitled-Suite have been postponed for the MVP and been moved to future updates:
+
+- Calendar Feature
+- Events
+- Pricing(AUD $5 per month for unlimited tasks)
+- Deeper Profile customisation
+
+## Additional Features for Roadmap
 
 Looking beyond Untitled Suite's initial release, the number one priority will be to enhance the user's experience by empowering their workspace alongside improving the overall functionality and security of the application.
 
