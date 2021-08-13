@@ -501,6 +501,24 @@ One action available within the dashboard to all Admin is the ability to delete 
 
 The Admin dashboard allows the Admin to also promote users to Admin status. This feature allows for the growth of the admin staff as the growth of the application increases. This action should be performed with caution and only be used once a user has gone through sufficient screening.
 
+### Testing libraries used in the app
+
+#### **Rspec:**
+
+The `Rspec` gem was selected as the back-end's primary testing framework for the following reasons:
+
+- performs fast tests
+- very good for unit testing, that is testing models and controllers
+- easy and clear to understand
+- clear failure reports
+- elegant when using mocks and stubs for data
+
+The above points are only some of the benefits a project such as `Untitled-Suite` will gain when utilising the `Rspec` framework. Through `Rspec`, a more complete and developed back-end was formulated, allowing for a more rich and user-friendly experience to be given. Although the testing for the back-end was conducted on the models only, `Untitled-Suite's` road map will focus on greater testing coverage of the APIs `models` and `controllers`.
+
+#### **Jest:**
+
+#### **Cypress:**
+
 ## Wireframes
 
 The initial wireframes designed for Untitled Suite aim to maintain a basic structure and layout during the development and production cycles. After discussions with stakeholders, some elements were modified and/or removed to cater for the MVP the clients sought. Below is a breakdown of all wireframes and any changes that occurred during the design process. It should be noted that in these initial designs, Untitled Suite maintained a mobile first design and will look to the future to continuously improve its design.
@@ -668,6 +686,153 @@ For snapshots of the progress of our Trello board, check out the `docs/trello-bo
 
 [trello-10](https://trello.com/b/Bj5asYWU/untitled-suite)
 
+### Production - Testing
+
+#### User 1 - New User Experience
+
+Below is `Untitled-Suite's` Production testing from a new `User` experience and POV. The New User was instructed to head over to the applications url: `https://untitled-suite-react-app.netlify.app/#/`. Once the home page was loaded, the New User was asked to explore the application. The following images were taken throughout the User's experience.
+
+- User arrived on the home page successfully.
+
+![User 1 Experience](./docs/production-testing/Selection_230.png)
+
+- User created a new account
+  ![User 1 Experience](./docs/production-testing/Selection_231.png)
+  ![User 1 Experience](./docs/production-testing/Selection_232.png)
+
+- User successfully created their new account and was redirected to the profile creation page.
+
+![User 1 Experience](./docs/production-testing/Selection_233.png)
+
+- The User successfully creates their profile and is redirected to the Tasker page.
+
+![User 1 Experience](./docs/production-testing/Selection_234.png)
+
+- The User heads back to their Profile page and decided to update their Avatar image.
+
+![User 1 Experience](./docs/production-testing/Selection_235.png)
+
+- Image is successfully uploaded and displayed back to the User.
+  ![User 1 Experience](./docs/production-testing/Selection_236.png)
+
+- The User decides to head over and check the pricing page.
+
+![User 1 Experience](./docs/production-testing/Selection_237.png)
+
+- The User heads over to the Tasker Page, and creates a new List.
+
+![User 1 Experience](./docs/production-testing/Selection_238.png)
+
+- The User successfully creates the List `Fred's List`.
+
+![User 1 Experience](./docs/production-testing/Selection_239.png)
+
+- Within the List, the User creates a new Task.
+
+![User 1 Experience](./docs/production-testing/Selection_240.png)
+
+- The Task is successfully created.
+
+![User 1 Experience](./docs/production-testing/Selection_241.png)
+
+- The user than creates a new Task and it to is successfully created.
+
+![User 1 Experience](./docs/production-testing/Selection_242.png)
+
+- The User decides to Updates Task 2.
+
+![User 1 Experience](./docs/production-testing/Selection_243.png)
+
+- The User is prompted with a Update Screen and makes changes.
+
+![User 1 Experience](./docs/production-testing/Selection_244.png)
+![User 1 Experience](./docs/production-testing/Selection_245.png)
+
+- Due to the Task being completed, Tasker shows that Task as a different colour indicating to the User, the Task has been completed.
+
+![User 1 Experience](./docs/production-testing/Selection_246.png)
+
+- The user then decides to delete Task 2.
+
+![User 1 Experience](./docs/production-testing/Selection_247.png)
+
+- The action is successfully completed and Task 2 was deleted.
+
+![User 1 Experience](./docs/production-testing/Selection_248.png)
+
+- The User then wishes to update the List name and begins to do so.
+
+![User 1 Experience](./docs/production-testing/Selection_249.png)
+
+- The User is prompted with a Update Screen for the List, and begins to change the List Name.
+
+![User 1 Experience](./docs/production-testing/Selection_250.png)
+
+- The action was successfully completed and the List has a new Name.
+
+![User 1 Experience](./docs/production-testing/Selection_251.png)
+
+- The User then decides to create 2 new Lists.
+
+![User 1 Experience](./docs/production-testing/Selection_252.png)
+
+- The actions is sucessfully and Tasker displays the new Lists to the User.
+
+![User 1 Experience](./docs/production-testing/Selection_253.png)
+
+- The User then uses the Search function to look up all Lists that start with `b`. The Search function returns 2 results.
+
+![User 1 Experience](./docs/production-testing/Selection_254.png)
+
+- The user then decides to end the testing session by Signing out of their Account.
+  ![User 1 Experience](./docs/production-testing/Selection_255.png)
+
+The User provided feedback to their experience and the Application's functionality and overall deign.
+
+- Very User-friendly
+- No errors or bug were encountered
+- Smooth Design
+- They had wishes that the Profile customisation feature was out.
+- Overall very effective at creating lists and tasks.
+
+#### User 2 - Admin Experience
+
+Below is `Untitled-Suite's` Production testing of an `Admin` User.
+
+- User Sign-in and accessed the `Admin Dashboard` Page.
+
+![User 2 Experience](./docs/production-testing/Selection_256.png)
+
+- The Admin expanded their search for all `Users` on the application.
+
+![User 2 Experience](./docs/production-testing/Selection_257.png)
+![User 2 Experience](./docs/production-testing/Selection_258.png)
+
+- The `Admin` used the `Search Function` to find the `User` of choice.
+
+![User 2 Experience](./docs/production-testing/Selection_259.png)
+
+- The `Admin` `Assigns` the `User` to `Admin` status.
+
+![User 2 Experience](./docs/production-testing/Selection_260.png)
+
+- The `Admin` `Un-assigns` the `User` to `User` status.
+
+![User 2 Experience](./docs/production-testing/Selection_261.png)
+
+- The `Admin` `Deletes` th `User` from the application database.
+
+![User 2 Experience](./docs/production-testing/Selection_262.png)
+
+- The `Admin` uses the `Search Function` to find the `deleted User`, no results were found. The `deletion` was successfully.
+  ![User 2 Experience](./docs/production-testing/Selection_263.png)
+
+The `Admin` provided feedback to their experience and the Application's functionality and overall deign for `admins`.
+
+- Easy for `Admins` to perform their daily tasks and functions.
+- No errors or bug were encountered during the `Admins` testing.
+- Some form of `messaging system` between `Admins` and `Users` would benefit the application.
+
 ## Additional Features for Roadmap - Whats next?
 
 Looking beyond Untitled Suite's initial release, the number one priority will be to enhance the user's experience by empowering their workspace alongside improving the overall functionality and security of the application.
@@ -702,26 +867,12 @@ Users can take friends from their friends list and create teams. Teams will be a
 
 Untitled Suite will add a new addition to its suite of tools in the form of a fully functional `Notepad`. This will allow users to create, edit and delete documentation on the fly. Additionally, users can utilise a copy and paste functionality between `Tasker` and the `Notepad` for easier and more productive sessions. The notepad will also be linked to the `Calendar` allowing users to save and attach meeting minutes and ideas from the notepad with any given `Event`.
 
-## References
-
-- Santos, J 12 October 2021, Best Management Software & Tools, apps, project management software reviews, reviewed 15 July 2021, [https://project-management.com/task-management-software](https://project-management.com/task-management-software)
-
-### MVP
-
-### Task delegation methodology
-
-### Production User - Testing
-
-### Testing libraries used in the app
-
-#### **Rspec:**
-
-#### **Jest:**
-
-#### **Cypress:**
-
 ### Self-Reflection
 
 #### **Nathan:**
 
 #### **Raymond:**
+
+## References
+
+- Santos, J 12 October 2021, Best Management Software & Tools, apps, project management software reviews, reviewed 15 July 2021, [https://project-management.com/task-management-software](https://project-management.com/task-management-software)
